@@ -4,6 +4,7 @@ import { NoProductsFoundComponent } from "./components/no-products-found/no-prod
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { FormsModule, FormBuilder,ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Router } from "@angular/router";
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from "./components/page-not-found/page-not-foun
 import { FireBaseConfig } from "../../environments/firebaseConfig";
 import { FilterByBrandPipe } from "./pipes/filterByBrand.pipe";
 import { ProductService } from "./services/product.service";
+import { StorageService } from "./services/storage.service"
 import { AdminGaurd } from "./services/admin-gaurd";
 import { AuthGuard } from "./services/auth_gaurd";
 import { AuthService } from "./services/auth.service";
@@ -40,7 +42,8 @@ import { MatAutocompleteModule, MatBadgeModule, MatButtonModule, MatButtonToggle
 		CommonModule,
 		MDBBootstrapModule.forRoot(),
 		AngularFireModule.initializeApp(FireBaseConfig),
-		AngularFireDatabaseModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
 		AngularFireAuthModule,
 		FormsModule,
 		HttpClientModule,
@@ -104,7 +107,8 @@ import { MatAutocompleteModule, MatBadgeModule, MatButtonModule, MatButtonToggle
 		MDBBootstrapModule,
 		AngularFireModule,
 		AngularFireAuthModule,
-		AngularFireDatabaseModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
 		FormsModule,
 		RouterModule,
 		OwlModule,

@@ -1,4 +1,6 @@
 <!-- 
+-->
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -65,6 +67,8 @@
             <label for="productImageUrl">Product Image</label>
             <input type="text" class="form-control" id="productImageUrl" [(ngModel)]="product.productImageUrl" name="productImageUrl"
               placeholder="Image Url" required>
+
+              <img [src] = "product.productImageUrl" class="img-fluid" alt="" width="360px" height="640px">
           </div>
 
           <hr class="mb-4">
@@ -76,18 +80,21 @@
   </div>
 </div>
   
--->
-<div class="container">
-  <div class="card card-cascade wider">
-    <input type="text" class="form-control" placeholder="ProductName" [(ngModel)]="product.productName">
-    <input type="text" class="form-control" placeholder="ProductCategory" [(ngModel)]="product.productCategory">
-    <input type="text" class="form-control" placeholder="ProductPrice" [(ngModel)]="product.productPrice">
-    <input type="text" class="form-control" placeholder="ProductDescription" [(ngModel)]="product.productDescription">
-    <input type="text" class="form-control" placeholder="productQuatity" [(ngModel)]="product.productQuatity">
-    
+<!--
+
+  <div class="container">
+    <div class="card card-cascade wider">
+      <input type="text" class="form-control" placeholder="ProductName" [(ngModel)]="product.productName">
+      <input type="text" class="form-control" placeholder="ProductCategory" [(ngModel)]="product.productCategory">
+      <input type="text" class="form-control" placeholder="ProductPrice" [(ngModel)]="product.productPrice">
+      <input type="text" class="form-control" placeholder="ProductDescription" [(ngModel)]="product.productDescription">
+      <input type="text" class="form-control" placeholder="productQuatity" [(ngModel)]="product.productQuatity">
+      
+    </div>
+    <button mat-raised-button (click)="createProduct2(product)"  >addProduct</button>
   </div>
-  <button mat-raised-button (click)="createProduct2(product)"  >addProduct</button>
-</div>
-
-
-
+  
+-->
+  
+  
+  
